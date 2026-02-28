@@ -1,4 +1,15 @@
 {
+  "install": [
+    "apt-get update && apt-get install -y git-lfs",
+    "git lfs install",
+    "git lfs fetch",
+    "git lfs checkout"
+  ],
+  "build": {
+    "env": {
+      "GIT_LFS_SKIP_SMUDGE": "0"
+    }
+  },
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
