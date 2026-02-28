@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETHFan Archive - All AMAs</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">ETH<span>Fan</span> Archive</div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Lecture Series Archive</h1>
+                <p>Complete collection of ETHFan Foundation AMAs and Lectures. Listen, read transcripts, and explore the knowledge shared by the community.</p>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="archive-grid" id="archiveGrid">
+                <!-- Cards will be dynamically inserted -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>ETHFan Foundation Archive - Educational Purpose Only</p>
+        </div>
+    </footer>
+
+    <!-- Modal for full transcript -->
+    <div class="modal-overlay" id="transcriptModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title" id="modalTitle">Transcript</div>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
