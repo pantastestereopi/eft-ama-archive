@@ -1,8 +1,3 @@
-# Audio files - stored locally, not in git
-*.mp3
-*.m4a
-*.wav
-
 # Temp files
 *.part
 *.tmp
