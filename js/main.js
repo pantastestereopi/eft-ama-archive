@@ -89,7 +89,6 @@ const archiveData = [
     }
 ];
 
-// Render archive cards
 function renderArchive() {
     const grid = document.getElementById('archiveGrid');
     
@@ -110,3 +109,65 @@ function renderArchive() {
                     <span>⏱ ${item.duration}</span>
                     <span>📅 ${item.date}</span>
                 </div>
+                <div class="card-actions">
+                    <a href="${item.mp3}" class="btn btn-primary" download>⬇ Download MP3</a>
+                    <button class="btn btn-secondary" onclick="showTranscript(${item.id})">📖 Details</button>
+                </div>
+            </div>
+        `;
+        grid.appendChild(card);
+    });
+}
+
+async function showTranscript(id) {
+    const item = archiveData.find(i => i.id === id);
+    if (!item) return;
+
+    const modal = document.getElementById('transcriptModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalBody = document.getElementById('modalBody');
+
+    modalTitle.textContent = item.title;
+    modalBody.innerHTML = '<p style="text-align:center;padding:40px;">Loading transcript...</p>';
+    modal.classList.add('active');
+
+    try {
+        const response = await fetch(item.transcript);
+        if (response.ok) {
+            const text = await response.text();
+            modalBody.innerHTML = `<pre>${text}</pre>`;
+        } else {
+            modalBody.innerHTML = `
+                <h3 style="color:var(--accent-primary);margin-bottom:12px;">${item.shortDesc}</h3>
+                <p style="margin-bottom:16px;">${item.description}</p>
+                <hr style="border-color:var(--border-color);margin:20px 0;">
+                <p><strong>Duration:</strong> ${item.duration}</p>
+                <p><strong>Date:</strong> ${item.date}</p>
+                <p style="margin-top:20px;color:var(--accent-primary);">Transcript coming soon.</p>
+            `;
+        }
+    } catch (e) {
+        modalBody.innerHTML = `
+            <h3 style="color:var(--accent-primary);margin-bottom:12px;">${item.shortDesc}</h3>
+            <p style="margin-bottom:16px;">${item.description}</p>
+            <hr style="border-color:var(--border-color);margin:20px 0;">
+            <p><strong>Duration:</strong> ${item.duration}</p>
+            <p><strong>Date:</strong> ${item.date}</p>
+            <p style="margin-top:20px;color:var(--accent-primary);">Transcript coming soon.</p>
+        `;
+    }
+}
+
+function closeModal() {
+    document.getElementById('transcriptModal').classList.remove('active');
+}
+
+document.getElementById('transcriptModal').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+});
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+});
+
+document.addEventListener('DOMContentLoaded', renderArchive);
