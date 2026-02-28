@@ -2,9 +2,9 @@
 /* Matching EFTdash aesthetic */
 
 :root {
-    --bg-primary: #0b0e14;
-    --bg-secondary: #131a27;
-    --bg-card: #1a2332;
+    --bg-primary: #000000;
+    --bg-secondary: #0a0a0a;
+    --bg-card: #111111;
     --bg-card-hover: #222d40;
     --accent-primary: #00e5a0; /* EFTdash green */
     --accent-secondary: #7c3aed;
@@ -126,8 +126,8 @@ header {
     width: 40px;
     height: 40px;
     border-radius: 8px;
-    object-fit: contain;
-    background: #fff;
+    object-fit: contain; filter: grayscale(100%);
+    background: #000;
     padding: 4px;
 }
 
@@ -211,7 +211,7 @@ header {
 }
 
 .btn-primary:hover {
-    filter: brightness(1.1);
+    filter: grayscale(100%) brightness(1.2);
     transform: translateY(-1px);
 }
 

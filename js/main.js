@@ -107,7 +107,7 @@ function renderArchive() {
                 <p class="card-description">${item.description}</p>
                 <div class="card-meta">
                     <span>⏱ ${item.duration}</span>
-                    <span>📅 ${item.date}</span>
+                    <span>${item.date}</span>
                 </div>
                 <div class="card-actions">
                     <a href="${item.mp3}" class="btn btn-primary" download>⬇ Download MP3</a>
