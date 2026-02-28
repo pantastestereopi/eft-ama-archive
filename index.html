@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ETHFan Archive - All AMAs</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -17,14 +18,12 @@
         <section class="hero">
             <div class="container">
                 <h1>Lecture Series Archive</h1>
-                <p>Complete collection of ETHFan Foundation AMAs and Lectures. Listen, read transcripts, and explore the knowledge shared by the community.</p>
+                <p>All ETHFan Foundation AMAs and Lectures. Listen and explore the knowledge.</p>
             </div>
         </section>
 
         <section class="container">
-            <div class="archive-grid" id="archiveGrid">
-                <!-- Cards will be dynamically inserted -->
-            </div>
+            <div class="archive-grid" id="archiveGrid"></div>
         </section>
     </main>
 
@@ -34,12 +33,12 @@
         </div>
     </footer>
 
-    <!-- Modal for full transcript -->
+    <!-- Modal -->
     <div class="modal-overlay" id="transcriptModal">
         <div class="modal-content">
             <div class="modal-header">
                 <div class="modal-title" id="modalTitle">Transcript</div>
-                <button class="modal-close" onclick="closeModal()">&times;</button>
+                <button class="modal-close" onclick="closeModal()">×</button>
             </div>
             <div class="modal-body" id="modalBody"></div>
         </div>
