@@ -1,14 +1,11 @@
-// ETHFan Archive - Main JavaScript
-
 const archiveData = [
     {
         id: 8,
-        number: "NEW",
+        number: "LATEST",
         title: "Let's Talk About CEX Finale",
         description: "The explosive finale covering centralized exchanges, business models, security risks, and why they're fundamentally flawed.",
         duration: "2h 14min",
         date: "February 2026",
-        icon: "💥",
         mp3: "audio/08_cex_finale.mp3",
         transcript: "transcripts/08_cex_finale.txt",
         shortDesc: "Truth about centralized exchanges"
@@ -19,8 +16,7 @@ const archiveData = [
         title: "AI Price Prediction",
         description: "AI's role in crypto, price prediction models, and ML with trading.",
         duration: "2h",
-        date: "August 2024",
-        icon: "🤖",
+        date: "2024",
         mp3: "audio/07_ai_prediction.mp3",
         transcript: "transcripts/07_ai_prediction.txt",
         shortDesc: "AI and crypto prediction"
@@ -31,8 +27,7 @@ const archiveData = [
         title: "Official Board Meeting",
         description: "Board meeting covering ecosystem updates, partnerships, and strategy.",
         duration: "2h 30min",
-        date: "August 2024",
-        icon: "📋",
+        date: "2024",
         mp3: "audio/06_board_meeting.mp3",
         transcript: "transcripts/06_board_meeting.txt",
         shortDesc: "Board updates and strategy"
@@ -43,8 +38,7 @@ const archiveData = [
         title: "Tokenization: Real vs Fake RWAs",
         description: "Critical analysis of Real World Assets - legitimate tokenization vs marketing.",
         duration: "2h",
-        date: "August 2024",
-        icon: "🪙",
+        date: "2024",
         mp3: "audio/Tokenization： What is Real & What is Fake About RWAs.mp3",
         transcript: "transcripts/05_tokenization.txt",
         shortDesc: "RWA tokenization analysis"
@@ -55,8 +49,7 @@ const archiveData = [
         title: "Franchising 101",
         description: "The franchise model and how it applies to crypto ecosystem growth.",
         duration: "2h",
-        date: "August 2024",
-        icon: "🔗",
+        date: "2024",
         mp3: "audio/Franchising 101.mp3",
         transcript: "transcripts/04_franchising.txt",
         shortDesc: "Franchise model for crypto"
@@ -67,8 +60,7 @@ const archiveData = [
         title: "Supply Exhaustion",
         description: "Token supply mechanics, distribution, and what happens when supply gets exhausted.",
         duration: "2h",
-        date: "July 2024",
-        icon: "📊",
+        date: "2024",
         mp3: "audio/Supply Exhaustion： Tesla to Toilet Paper.mp3",
         transcript: "transcripts/03_supply_exhaustion.txt",
         shortDesc: "Token supply mechanics"
@@ -79,8 +71,7 @@ const archiveData = [
         title: "Foundation Introduction",
         description: "Deep dive into ETHFan Foundation mission, structure, and ecosystem services.",
         duration: "2h 12min",
-        date: "July 2024",
-        icon: "🏛️",
+        date: "2024",
         mp3: "audio/02_foundation_intro.mp3",
         transcript: "transcripts/02_foundation_intro.txt",
         shortDesc: "Foundation mission and structure"
@@ -91,8 +82,7 @@ const archiveData = [
         title: "Foundation Lecture Series AMA's",
         description: "First AMA session - foundation introduction, tokenomics, and vision.",
         duration: "1h 27min",
-        date: "July 2024",
-        icon: "🎙️",
+        date: "2024",
         mp3: "audio/01_ethfan_ama.mp3",
         transcript: "transcripts/01_ethfan_ama.txt",
         shortDesc: "Foundation introduction and first AMA"
@@ -108,7 +98,7 @@ function renderArchive() {
         card.className = 'archive-card';
         card.innerHTML = `
             <div class="card-header">
-                <div class="card-icon">${item.icon}</div>
+                <img src="eftlogo.png" alt="EFT" class="card-logo">
                 <div>
                     <div class="card-number">${item.number}</div>
                     <div class="card-title">${item.title}</div>
@@ -121,7 +111,7 @@ function renderArchive() {
                     <span>📅 ${item.date}</span>
                 </div>
                 <div class="audio-player">
-                    <audio controls preload="none">
+                    <audio controls preload="metadata">
                         <source src="${item.mp3}" type="audio/mpeg">
                         Your browser does not support the audio element.
                     </audio>
