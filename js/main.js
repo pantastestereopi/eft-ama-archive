@@ -16,7 +16,7 @@ const archiveData = [
         title: "AI Price Prediction",
         description: "AI's role in crypto, price prediction models, and ML with trading.",
         duration: "2h",
-        date: "2024",
+        date: "",
         mp3: "audio/07_ai_prediction.mp3",
         transcript: "transcripts/07_ai_prediction.txt",
         shortDesc: "AI and crypto prediction"
@@ -27,7 +27,7 @@ const archiveData = [
         title: "Official Board Meeting",
         description: "Board meeting covering ecosystem updates, partnerships, and strategy.",
         duration: "2h 30min",
-        date: "2024",
+        date: "",
         mp3: "audio/06_board_meeting.mp3",
         transcript: "transcripts/06_board_meeting.txt",
         shortDesc: "Board updates and strategy"
@@ -38,7 +38,7 @@ const archiveData = [
         title: "Tokenization: Real vs Fake RWAs",
         description: "Critical analysis of Real World Assets - legitimate tokenization vs marketing.",
         duration: "2h",
-        date: "2024",
+        date: "",
         mp3: "audio/Tokenization： What is Real & What is Fake About RWAs.mp3",
         transcript: "transcripts/05_tokenization.txt",
         shortDesc: "RWA tokenization analysis"
@@ -49,7 +49,7 @@ const archiveData = [
         title: "Franchising 101",
         description: "The franchise model and how it applies to crypto ecosystem growth.",
         duration: "2h",
-        date: "2024",
+        date: "",
         mp3: "audio/Franchising 101.mp3",
         transcript: "transcripts/04_franchising.txt",
         shortDesc: "Franchise model for crypto"
@@ -60,7 +60,7 @@ const archiveData = [
         title: "Supply Exhaustion",
         description: "Token supply mechanics, distribution, and what happens when supply gets exhausted.",
         duration: "2h",
-        date: "2024",
+        date: "",
         mp3: "audio/Supply Exhaustion： Tesla to Toilet Paper.mp3",
         transcript: "transcripts/03_supply_exhaustion.txt",
         shortDesc: "Token supply mechanics"
@@ -71,7 +71,7 @@ const archiveData = [
         title: "Foundation Introduction",
         description: "Deep dive into ETHFan Foundation mission, structure, and ecosystem services.",
         duration: "2h 12min",
-        date: "2024",
+        date: "",
         mp3: "audio/02_foundation_intro.mp3",
         transcript: "transcripts/02_foundation_intro.txt",
         shortDesc: "Foundation mission and structure"
@@ -82,7 +82,7 @@ const archiveData = [
         title: "Foundation Lecture Series AMA's",
         description: "First AMA session - foundation introduction, tokenomics, and vision.",
         duration: "1h 27min",
-        date: "2024",
+        date: "",
         mp3: "audio/01_ethfan_ama.mp3",
         transcript: "transcripts/01_ethfan_ama.txt",
         shortDesc: "Foundation introduction and first AMA"
