@@ -308,3 +308,36 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* Fix overflow */
+html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+.archive-grid {
+    overflow-x: hidden;
+}
+
+/* Modal improvements */
+.modal-details {
+    padding: 10px;
+}
+
+.modal-details h3 {
+    color: var(--accent-primary);
+    margin: 16px 0 8px;
+    font-size: 1rem;
+}
+
+.modal-details hr {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 16px 0;
+}
+
+.modal-duration, .modal-date {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}

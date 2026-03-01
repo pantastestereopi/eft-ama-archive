@@ -7,8 +7,8 @@ const archiveData = [
         duration: "2h 14min",
         date: "February 2026",
         mp3: "audio/08_cex_finale.mp3",
-        transcript: "transcripts/08_cex_finale.txt",
-        shortDesc: "Truth about centralized exchanges"
+        shortDesc: "Truth about centralized exchanges",
+        details: "The explosive finale of the ETHFan Foundation Lecture Series. Topics: CEX business model analysis, security risks, banking comparison, regulation impact 2020+, listing vs partnership negotiations, FTX/Binance/Coinbase/OKX discussion. Key message: 'Not your keys, not your crypto.' - The speaker explains why all centralized exchanges are fundamentally flawed and cannot scale to serve millions of users safely."
     },
     {
         id: 7,
@@ -18,8 +18,8 @@ const archiveData = [
         duration: "2h",
         date: "",
         mp3: "audio/07_ai_prediction.mp3",
-        transcript: "transcripts/07_ai_prediction.txt",
-        shortDesc: "AI and crypto prediction"
+        shortDesc: "AI and crypto prediction",
+        details: "Exploring the intersection of Artificial Intelligence and cryptocurrency markets. Discussion on AI-driven price prediction models, machine learning applications in trading, and how AI is reshaping the crypto landscape."
     },
     {
         id: 6,
@@ -29,8 +29,8 @@ const archiveData = [
         duration: "2h 30min",
         date: "",
         mp3: "audio/06_board_meeting.mp3",
-        transcript: "transcripts/06_board_meeting.txt",
-        shortDesc: "Board updates and strategy"
+        shortDesc: "Board updates and strategy",
+        details: "Virtual board meeting with ecosystem updates, partnership announcements, and strategic direction for the ETHFan Foundation. Community questions and answers included."
     },
     {
         id: 5,
@@ -40,8 +40,8 @@ const archiveData = [
         duration: "2h",
         date: "",
         mp3: "audio/Tokenization： What is Real & What is Fake About RWAs.mp3",
-        transcript: "transcripts/05_tokenization.txt",
-        shortDesc: "RWA tokenization analysis"
+        shortDesc: "RWA tokenization analysis",
+        details: "Critical analysis of Real World Assets (RWAs). What's legitimate tokenization vs what's just marketing? Deep dive into fractional ownership, security tokens, and the future of asset tokenization."
     },
     {
         id: 4,
@@ -51,8 +51,8 @@ const archiveData = [
         duration: "2h",
         date: "",
         mp3: "audio/Franchising 101.mp3",
-        transcript: "transcripts/04_franchising.txt",
-        shortDesc: "Franchise model for crypto"
+        shortDesc: "Franchise model for crypto",
+        details: "Understanding the franchise model and how it applies to crypto ecosystem growth. How to build scalable, community-driven crypto projects using franchise-style expansion."
     },
     {
         id: 3,
@@ -62,8 +62,8 @@ const archiveData = [
         duration: "2h",
         date: "",
         mp3: "audio/Supply Exhaustion： Tesla to Toilet Paper.mp3",
-        transcript: "transcripts/03_supply_exhaustion.txt",
-        shortDesc: "Token supply mechanics"
+        shortDesc: "Token supply mechanics",
+        details: "Comprehensive look at token supply mechanics. What happens when supply gets exhausted? Distribution analysis, tokenomics deep dive, and the impact of supply shocks on price."
     },
     {
         id: 2,
@@ -73,8 +73,8 @@ const archiveData = [
         duration: "2h 12min",
         date: "",
         mp3: "audio/02_foundation_intro.mp3",
-        transcript: "transcripts/02_foundation_intro.txt",
-        shortDesc: "Foundation mission and structure"
+        shortDesc: "Foundation mission and structure",
+        details: "Deep dive into the ETHFan Foundation - mission, structure, and how it serves the ecosystem. Learn about the foundation's goals and how it supports the community."
     },
     {
         id: 1,
@@ -84,8 +84,8 @@ const archiveData = [
         duration: "1h 27min",
         date: "",
         mp3: "audio/01_ethfan_ama.mp3",
-        transcript: "transcripts/01_ethfan_ama.txt",
-        shortDesc: "Foundation introduction and first AMA"
+        shortDesc: "Foundation introduction and first AMA",
+        details: "The very first AMA in the series. Foundation introduction, tokenomics explanation, vision for the future, and answers to community questions."
     }
 ];
 
@@ -95,9 +95,11 @@ function renderArchive() {
     archiveData.forEach(item => {
         const card = document.createElement('div');
         card.className = 'archive-card';
+        const dateSpan = item.date ? `<span>📅 ${item.date}</span>` : '';
+        
         card.innerHTML = `
             <div class="card-header">
-                <img src="eftlogo.png" alt="EFT" class="card-logo">
+                <img src="logo.png" alt="EFT" class="card-logo">
                 <div>
                     <div class="card-number">${item.number}</div>
                     <div class="card-title">${item.title}</div>
@@ -107,10 +109,10 @@ function renderArchive() {
                 <p class="card-description">${item.description}</p>
                 <div class="card-meta">
                     <span>⏱ ${item.duration}</span>
-                    <span>${item.date}</span>
+                    ${dateSpan}
                 </div>
                 <div class="card-actions">
-                    <a href="${item.mp3}" class="btn btn-primary" download>⬇ Download MP3</a>
+                    <a href="${item.mp3}" class="btn btn-primary" download>⬇ Download</a>
                     <button class="btn btn-secondary" onclick="showTranscript(${item.id})">📖 Details</button>
                 </div>
             </div>
@@ -119,7 +121,7 @@ function renderArchive() {
     });
 }
 
-async function showTranscript(id) {
+function showTranscript(id) {
     const item = archiveData.find(i => i.id === id);
     if (!item) return;
 
@@ -128,34 +130,19 @@ async function showTranscript(id) {
     const modalBody = document.getElementById('modalBody');
 
     modalTitle.textContent = item.title;
-    modalBody.innerHTML = '<p style="text-align:center;padding:40px;">Loading transcript...</p>';
+    modalBody.innerHTML = `
+        <div class="modal-details">
+            <p class="modal-duration">⏱ Duration: ${item.duration}</p>
+            ${item.date ? `<p class="modal-date">📅 ${item.date}</p>` : ''}
+            <hr>
+            <h3>About this session:</h3>
+            <p>${item.details}</p>
+            <hr>
+            <h3>Description:</h3>
+            <p>${item.description}</p>
+        </div>
+    `;
     modal.classList.add('active');
-
-    try {
-        const response = await fetch(item.transcript);
-        if (response.ok) {
-            const text = await response.text();
-            modalBody.innerHTML = `<pre>${text}</pre>`;
-        } else {
-            modalBody.innerHTML = `
-                <h3 style="color:var(--accent-primary);margin-bottom:12px;">${item.shortDesc}</h3>
-                <p style="margin-bottom:16px;">${item.description}</p>
-                <hr style="border-color:var(--border-color);margin:20px 0;">
-                <p><strong>Duration:</strong> ${item.duration}</p>
-                <p><strong>Date:</strong> ${item.date}</p>
-                <p style="margin-top:20px;color:var(--accent-primary);">Transcript coming soon.</p>
-            `;
-        }
-    } catch (e) {
-        modalBody.innerHTML = `
-            <h3 style="color:var(--accent-primary);margin-bottom:12px;">${item.shortDesc}</h3>
-            <p style="margin-bottom:16px;">${item.description}</p>
-            <hr style="border-color:var(--border-color);margin:20px 0;">
-            <p><strong>Duration:</strong> ${item.duration}</p>
-            <p><strong>Date:</strong> ${item.date}</p>
-            <p style="margin-top:20px;color:var(--accent-primary);">Transcript coming soon.</p>
-        `;
-    }
 }
 
 function closeModal() {
