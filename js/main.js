@@ -7,8 +7,7 @@ const archiveData = [
         duration: "2h 14min",
         date: "February 2026",
         mp3: "https://github.com/pantastestereopi/eft-ama-archive/releases/download/v1.0/08_cex_finale.mp3",
-        shortDesc: "Truth about centralized exchanges",
-        details: "The explosive finale of the ETHFan Foundation Lecture Series. Topics: CEX business model analysis, security risks, banking comparison, regulation impact 2020+, listing vs partnership negotiations, FTX/Binance/Coinbase/OKX discussion. Key message: 'Not your keys, not your crypto.' - The speaker explains why all centralized exchanges are fundamentally flawed and cannot scale to serve millions of users safely."
+        details: "FINALE - The most anticipated episode! Deep dive into centralized exchanges (CEX). Topics include:\n\n• CEX Business Model: How exchanges make money from volume, not price\n• Banks vs CEX comparison: Why traditional banks are more trustworthy\n• Security crisis: Hot wallets holding billions as hacker targets\n• Regulation impact: How 2020+ regulations forced changes\n• Listing vs Partnership: Why signing with exchanges is often a 'death contract'\n• Famous exchanges discussed: FTX, Binance, Coinbase, OKX, MXC, MCX\n• Key quote: 'Every single exchange is Fugazi (fake)'\n• Final advice: 'Not your keys, not your crypto'\n\nThe speaker shares personal experiences and explains why he refuses to list on most exchanges. Emotional discussion about death and what comes after."
     },
     {
         id: 7,
@@ -18,19 +17,17 @@ const archiveData = [
         duration: "2h",
         date: "",
         mp3: "https://github.com/pantastestereopi/eft-ama-archive/releases/download/v1.0/07_ai_prediction.mp3",
-        shortDesc: "AI and crypto prediction",
-        details: "Exploring the intersection of Artificial Intelligence and cryptocurrency markets. Discussion on AI-driven price prediction models, machine learning applications in trading, and how AI is reshaping the crypto landscape."
+        details: "Exploring the intersection of Artificial Intelligence and cryptocurrency markets:\n\n• AI-driven price prediction models and their limitations\n• Machine learning applications in trading strategies\n• How AI is reshaping the crypto landscape\n• Neural networks and market analysis\n• Real-world examples of AI trading bots\n• The future of algorithmic trading\n• Risks and benefits of AI in financial markets\n• Community Q&A on AI implementations"
     },
     {
         id: 6,
         number: "Vol. 6",
         title: "Official Board Meeting",
-        description: "Board meeting covering ecosystem updates, partnerships, and strategy.",
+        description: "Board meeting covering ecosystem updates, partnerships, and strategic direction.",
         duration: "2h 30min",
         date: "",
         mp3: "https://github.com/pantastestereopi/eft-ama-archive/releases/download/v1.0/06_board_meeting.mp3",
-        shortDesc: "Board updates and strategy",
-        details: "Virtual board meeting with ecosystem updates, partnership announcements, and strategic direction for the ETHFan Foundation. Community questions and answers included."
+        details: "Virtual board meeting with comprehensive ecosystem updates:\n\n• Partnership announcements and negotiations\n• Strategic direction for the foundation\n• Community growth metrics and milestones\n• Roadmap discussion for upcoming features\n• Treasury management and allocation\n• Marketing and outreach strategies\n• Technical development updates\n• Open Q&A with community members\n• Discussion of competitive landscape"
     },
     {
         id: 5,
@@ -40,8 +37,7 @@ const archiveData = [
         duration: "2h",
         date: "",
         mp3: "https://github.com/pantastestereopi/eft-ama-archive/releases/download/v1.0/Tokenization%3A%20What%20is%20Real%20%26%20What%20is%20Fake%20About%20RWAs.mp3",
-        shortDesc: "RWA tokenization analysis",
-        details: "Critical analysis of Real World Assets (RWAs). What's legitimate tokenization vs what's just marketing? Deep dive into fractional ownership, security tokens, and the future of asset tokenization."
+        details: "Critical analysis of Real World Assets (RWAs):\n\n• What constitutes legitimate tokenization\n• Fractional ownership and its benefits\n• Security tokens vs utility tokens\n• Real estate tokenization\n• Commodities and precious metals\n• Why most 'RWA tokens' are just marketing\n• Regulatory considerations for asset tokenization\n• Case studies of successful RWA projects\n• Warning signs of fake RWA projects\n• The future of real-world asset tokenization"
     },
     {
         id: 4,
@@ -51,8 +47,7 @@ const archiveData = [
         duration: "2h",
         date: "",
         mp3: "https://github.com/pantastestereopi/eft-ama-archive/releases/download/v1.0/Franchising%20101.mp3",
-        shortDesc: "Franchise model for crypto",
-        details: "Understanding the franchise model and how it applies to crypto ecosystem growth. How to build scalable, community-driven crypto projects using franchise-style expansion."
+        details: "Understanding the franchise model in crypto:\n\n• Traditional franchising vs crypto franchising\n• Building scalable, community-driven projects\n• Replication strategies for ecosystem growth\n• Brand building and community management\n• Case studies of successful crypto franchises\n• Decentralized franchise models\n• Community ownership and governance\n• Economic incentives in franchise structures\n• Scaling beyond initial teams\n• Best practices for project expansion"
     },
     {
         id: 3,
@@ -62,8 +57,7 @@ const archiveData = [
         duration: "2h",
         date: "",
         mp3: "https://github.com/pantastestereopi/eft-ama-archive/releases/download/v1.0/Supply%20Exhaustion%3A%20Tesla%20to%20Toilet%20Paper.mp3",
-        shortDesc: "Token supply mechanics",
-        details: "Comprehensive look at token supply mechanics. What happens when supply gets exhausted? Distribution analysis, tokenomics deep dive, and the impact of supply shocks on price."
+        details: "Deep dive into token supply mechanics:\n\n• Understanding token supply and circulation\n• What happens when supply gets exhausted\n• Distribution analysis and whale behavior\n• Tokenomics deep dive: inflation, deflation\n• Supply shock impact on price\n• Case study: Tesla's supply decisions\n• Toilet paper analogy for token scarcity\n• Burn mechanisms and their effectiveness\n• Supply vs demand dynamics\n• Long-term tokenomics strategies"
     },
     {
         id: 2,
@@ -73,8 +67,7 @@ const archiveData = [
         duration: "2h 12min",
         date: "",
         mp3: "https://github.com/pantastestereopi/eft-ama-archive/releases/download/v1.0/02_foundation_intro.mp3",
-        shortDesc: "Foundation mission and structure",
-        details: "Deep dive into the ETHFan Foundation - mission, structure, and how it serves the ecosystem. Learn about the foundation's goals and how it supports the community."
+        details: "Comprehensive foundation introduction:\n\n• Mission and core values of ETHFan Foundation\n• Organizational structure and team\n• How the foundation serves the ecosystem\n• Grant programs and funding initiatives\n• Community engagement strategies\n• Technical infrastructure support\n• Educational resources and documentation\n• Partnership framework\n• Long-term vision and goals\n• Q&A about foundation operations"
     },
     {
         id: 1,
@@ -84,8 +77,7 @@ const archiveData = [
         duration: "1h 27min",
         date: "",
         mp3: "https://github.com/pantastestereopi/eft-ama-archive/releases/download/v1.0/01_ethfan_ama.mp3",
-        shortDesc: "Foundation introduction and first AMA",
-        details: "The very first AMA in the series. Foundation introduction, tokenomics explanation, vision for the future, and answers to community questions."
+        details: "The very first AMA session - where it all began:\n\n• Foundation introduction and team presentation\n• Tokenomics explained in detail\n• Vision for the future of ETHFan\n• Community guidelines and expectations\n• Initial roadmap and milestones\n• How to participate in the ecosystem\n• Token utility and use cases\n• Staking and reward mechanisms\n• First community questions answered\n• Setting the tone for future sessions"
     }
 ];
 
@@ -137,9 +129,6 @@ function showTranscript(id) {
             <hr>
             <h3>About this session:</h3>
             <p>${item.details}</p>
-            <hr>
-            <h3>Description:</h3>
-            <p>${item.description}</p>
         </div>
     `;
     modal.classList.add('active');
