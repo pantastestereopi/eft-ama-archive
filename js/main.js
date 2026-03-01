@@ -6,7 +6,7 @@ const archiveData = [
         description: "The explosive finale covering centralized exchanges, business models, security risks, and why they're fundamentally flawed.",
         duration: "2h 14min",
         date: "February 2026",
-        mp3: "audio/08_cex_finale.mp3",
+        mp3: "https://github.com/pantastestereopi/eft-ama-archive/releases/download/v1.0/08_cex_finale.mp3",
         shortDesc: "Truth about centralized exchanges",
         details: "The explosive finale of the ETHFan Foundation Lecture Series. Topics: CEX business model analysis, security risks, banking comparison, regulation impact 2020+, listing vs partnership negotiations, FTX/Binance/Coinbase/OKX discussion. Key message: 'Not your keys, not your crypto.' - The speaker explains why all centralized exchanges are fundamentally flawed and cannot scale to serve millions of users safely."
     },
@@ -17,7 +17,7 @@ const archiveData = [
         description: "AI's role in crypto, price prediction models, and ML with trading.",
         duration: "2h",
         date: "",
-        mp3: "audio/07_ai_prediction.mp3",
+        mp3: "https://github.com/pantastestereopi/eft-ama-archive/releases/download/v1.0/07_ai_prediction.mp3",
         shortDesc: "AI and crypto prediction",
         details: "Exploring the intersection of Artificial Intelligence and cryptocurrency markets. Discussion on AI-driven price prediction models, machine learning applications in trading, and how AI is reshaping the crypto landscape."
     },
@@ -28,7 +28,7 @@ const archiveData = [
         description: "Board meeting covering ecosystem updates, partnerships, and strategy.",
         duration: "2h 30min",
         date: "",
-        mp3: "audio/06_board_meeting.mp3",
+        mp3: "https://github.com/pantastestereopi/eft-ama-archive/releases/download/v1.0/06_board_meeting.mp3",
         shortDesc: "Board updates and strategy",
         details: "Virtual board meeting with ecosystem updates, partnership announcements, and strategic direction for the ETHFan Foundation. Community questions and answers included."
     },
@@ -39,7 +39,7 @@ const archiveData = [
         description: "Critical analysis of Real World Assets - legitimate tokenization vs marketing.",
         duration: "2h",
         date: "",
-        mp3: "audio/Tokenization： What is Real & What is Fake About RWAs.mp3",
+        mp3: "https://github.com/pantastestereopi/eft-ama-archive/releases/download/v1.0/Tokenization%3A%20What%20is%20Real%20%26%20What%20is%20Fake%20About%20RWAs.mp3",
         shortDesc: "RWA tokenization analysis",
         details: "Critical analysis of Real World Assets (RWAs). What's legitimate tokenization vs what's just marketing? Deep dive into fractional ownership, security tokens, and the future of asset tokenization."
     },
@@ -50,7 +50,7 @@ const archiveData = [
         description: "The franchise model and how it applies to crypto ecosystem growth.",
         duration: "2h",
         date: "",
-        mp3: "audio/Franchising 101.mp3",
+        mp3: "https://github.com/pantastestereopi/eft-ama-archive/releases/download/v1.0/Franchising%20101.mp3",
         shortDesc: "Franchise model for crypto",
         details: "Understanding the franchise model and how it applies to crypto ecosystem growth. How to build scalable, community-driven crypto projects using franchise-style expansion."
     },
@@ -61,7 +61,7 @@ const archiveData = [
         description: "Token supply mechanics, distribution, and what happens when supply gets exhausted.",
         duration: "2h",
         date: "",
-        mp3: "audio/Supply Exhaustion： Tesla to Toilet Paper.mp3",
+        mp3: "https://github.com/pantastestereopi/eft-ama-archive/releases/download/v1.0/Supply%20Exhaustion%3A%20Tesla%20to%20Toilet%20Paper.mp3",
         shortDesc: "Token supply mechanics",
         details: "Comprehensive look at token supply mechanics. What happens when supply gets exhausted? Distribution analysis, tokenomics deep dive, and the impact of supply shocks on price."
     },
@@ -72,7 +72,7 @@ const archiveData = [
         description: "Deep dive into ETHFan Foundation mission, structure, and ecosystem services.",
         duration: "2h 12min",
         date: "",
-        mp3: "audio/02_foundation_intro.mp3",
+        mp3: "https://github.com/pantastestereopi/eft-ama-archive/releases/download/v1.0/02_foundation_intro.mp3",
         shortDesc: "Foundation mission and structure",
         details: "Deep dive into the ETHFan Foundation - mission, structure, and how it serves the ecosystem. Learn about the foundation's goals and how it supports the community."
     },
@@ -83,7 +83,7 @@ const archiveData = [
         description: "First AMA session - foundation introduction, tokenomics, and vision.",
         duration: "1h 27min",
         date: "",
-        mp3: "audio/01_ethfan_ama.mp3",
+        mp3: "https://github.com/pantastestereopi/eft-ama-archive/releases/download/v1.0/01_ethfan_ama.mp3",
         shortDesc: "Foundation introduction and first AMA",
         details: "The very first AMA in the series. Foundation introduction, tokenomics explanation, vision for the future, and answers to community questions."
     }
